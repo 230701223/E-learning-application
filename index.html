@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Learn | Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+    }
+
+    header, footer {
+      background: #4b0082;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: white;
+      color: #4b0082;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero button:hover {
+      background: #eee;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+
+    .feature {
+      background: white;
+      padding: 2rem;
+      width: 280px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature h3 {
+      color: #4b0082;
+    }
+
+    .cta {
+      background: #e8eaf6;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .cta h2 {
+      color: #4b0082;
+      margin-bottom: 1rem;
+    }
+
+    .cta button {
+      background-color: #4b0082;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cta button:hover {
+      background-color: #673ab7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>E-Learn Platform</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="certified.html">Certified Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Learn Anything, Anytime, Anywhere</h1>
+    <p>Empower your future with free and certified online courses in programming, design, AI, and more — all at your fingertips.</p>
+    <button onclick="location.href='courses.html'">Explore Courses</button>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Flexible Learning</h3>
+      <p>Study at your own pace with free tutorials and structured certified courses.</p>
+    </div>
+    <div class="feature">
+      <h3>Expert Content</h3>
+      <p>Courses taught by industry experts on YouTube and Udemy with real-world projects.</p>
+    </div>
+    <div class="feature">
+      <h3>Recognized Certification</h3>
+      <p>Get certificates for completing top Udemy courses to add value to your resume.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Start Learning Today!</h2>
+    <button onclick="location.href='certified.html'">View Certified Courses</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 E-Learn. All rights reserved.</p>
+  </footer>
+</body>
+</html>
