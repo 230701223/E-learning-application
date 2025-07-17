@@ -1,1 +1,15 @@
 # E-learning-application
+
+COMPANY :CODETECH IT SOLUTIONS
+
+NAME : K M PADMASRI
+
+INTERN ID :CT06DG2278
+
+DOMAIN : FRONT END DEVELOPMENT
+
+DURATION : 4 WEEKS
+
+MENTOR : VAISHALI
+
+https://e-learning-platform-interns.netlify.app/
