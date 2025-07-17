@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses | E-Learn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #eef;
+    }
+
+    header, footer {
+      background: #4b0082;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .controls {
+      text-align: center;
+      margin: 1rem;
+    }
+
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .courses {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .course {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .course iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    h3 {
+      color: #4b0082;
+    }
+
+    .btn {
+      margin-top: 0.5rem;
+      background-color: #4b0082;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #673ab7;
+    }
+
+
+    .price {
+      font-weight: bold;
+      color: green;
+    }
+
+    .btn-paid {
+  background-color:  #4b0082;
+  border:   #4b0082;
+  font-weight: bold;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.btn-paid:hover {
+  background-color :#673ab7;
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Explore Courses</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="controls">
+  <label for="category">Filter by:</label>
+  <select id="category" onchange="filterCourses()">
+    <option value="all">All</option>
+    <option value="free">Free Courses</option>
+    <option value="paid">Paid Courses</option>
+  </select>
+</div>
+
+<section class="courses" id="courseList">
+  <!-- Free Courses -->
+  <div class="course free">
+    <h3>HTML Full Course</h3>
+    <iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('HTML')">Enroll Free</button>
+  </div>
+
+  <div class="course free">
+    <h3>CSS Crash Course</h3>
+    <iframe src="https://www.youtube.com/embed/yfoY53QXEnI" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('CSS')">Enroll Free</button>
+  </div>
+
+  <div class="course free">
+    <h3>JavaScript Basics</h3>
+    <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('JavaScript')">Enroll Free</button>
+  </div>
+
+  <div class="course free">
+    <h3>Python for Beginners</h3>
+    <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('Python')">Enroll Free</button>
+  </div>
+
+  <div class="course free">
+    <h3>Data Science Full Course</h3>
+    <iframe src="https://www.youtube.com/embed/X3paOmcrTjQ" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('Data Science')">Enroll Free</button>
+  </div>
+
+  <div class="course free">
+    <h3>Machine Learning Crash Course</h3>
+    <iframe src="https://www.youtube.com/embed/GwIo3gDZCVQ" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('Machine Learning')">Enroll Free</button>
+  </div>
+
+  <div class="course free">
+    <h3>React JS Tutorial</h3>
+    <iframe src="https://www.youtube.com/embed/bMknfKXIFA8" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('React JS')">Enroll Free</button>
+  </div>
+
+  <div class="course free">
+    <h3>Git & GitHub for Beginners</h3>
+    <iframe src="https://www.youtube.com/embed/RGOj5yH7evk" allowfullscreen></iframe>
+    <button class="btn" onclick="enroll('Git & GitHub')">Enroll Free</button>
+  </div>
+
+  <!-- Paid Udemy Courses -->
+  <div class="course paid paid-course">
+    <h3>Python Bootcamp 2024</h3>
+    <p class="price">₹449</p>
+    <a href="https://www.udemy.com/course/complete-python-bootcamp/" target="_blank" class="btn btn-paid">Enroll Paid</a>
+  </div>
+  
+  <div class="course paid paid-course">
+    <h3>Web Developer Bootcamp</h3>
+    <p class="price">₹449</p>
+    <a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank" class="btn btn-paid">Enroll Paid</a>
+  </div>
+  
+  <div class="course paid paid-course">
+    <h3>JavaScript Mastery</h3>
+    <p class="price">₹649</p>
+    <a href="https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/" target="_blank" class="btn btn-paid">Enroll Paid</a>
+  </div>
+  
+  <div class="course paid paid-course">
+    <h3>Machine Learning A-Z™</h3>
+    <p class="price">₹799</p>
+    <a href="https://www.udemy.com/course/machinelearning/" target="_blank" class="btn btn-paid">Enroll Paid</a>
+  </div>
+  
+  <div class="course paid paid-course">
+    <h3>UI/UX Design Essentials</h3>
+    <p class="price">₹999</p>
+    <a href="https://www.udemy.com/course/ui-ux-web-design-using-adobe-xd/" target="_blank" class="btn btn-paid">Enroll Paid</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 E-Learn. All rights reserved.</p>
+</footer>
+
+<script>
+  function enroll(courseName) {
+    alert("You have enrolled in: " + courseName);
+  }
+
+  function filterCourses() {
+    const filter = document.getElementById('category').value;
+    const allCourses = document.querySelectorAll('.course');
+
+    allCourses.forEach(course => {
+      if (filter === 'all') {
+        course.style.display = 'block';
+      } else if (filter === 'free') {
+        course.classList.contains('free') ? course.style.display = 'block' : course.style.display = 'none';
+      } else if (filter === 'paid') {
+        course.classList.contains('paid') ? course.style.display = 'block' : course.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
